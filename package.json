@@ -20,13 +20,20 @@
   },
   "scripts": {
     "start": "env-cmd -f .env.dev react-app-rewired start",
-    "build": "env-cmd -f .env.dev react-scripts build",
-    "start-prod": "env-cmd -f .env.prod react-scripts start",
-    "build-prod": "env-cmd -f .env.prod react-scripts build",
-    "start-qa": "env-cmd -f .env.qa react-scripts start",
-    "build-qa": "env-cmd -f .env.qa react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "env-cmd -f .env.dev react-app-rewired build",
+    "start-prod": "env-cmd -f .env.prod react-app-rewired start",
+    "build-prod": "env-cmd -f .env.prod react-app-rewired build",
+    "start-qa": "env-cmd -f .env.qa react-app-rewired start",
+    "build-qa": "env-cmd -f .env.qa react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "prepare": "husky install",
+    "lint": "eslint src/**/*.{ts,tsx} --max-warnings=0",
+    "lint:fix": "eslint --fix --max-warnings=0 src/**/*.{ts,tsx}",
+    "lint:fix-dry-run": "eslint --fix-dry-run src/**/*.{ts,tsx}",
+    "lint:show-only-errors": "eslint --quiet src/**/*.{ts,tsx}",
+    "prettier:fix": "prettier --write .",
+    "prettier:check": "prettier --check ."
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +52,34 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": ">=10",
+    "prettier": "^2.3.2"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn prettier:fix",
+      "yarn lint:fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

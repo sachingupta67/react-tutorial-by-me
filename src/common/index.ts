@@ -1,3 +1,3 @@
-export * from './colors'
-export * from './constants'
-export * from './utility'
+export * from './colors';
+export * from './constants';
+export * from './utility';

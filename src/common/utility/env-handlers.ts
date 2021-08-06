@@ -1,6 +1,5 @@
-import { constant } from '../constants';
+import { constants } from 'common';
 
-const { REACT_APP_ENV = constant.DEV } = process.env;
-const currentEnv = REACT_APP_ENV
-
-export { currentEnv }
+const { REACT_APP_ENV = constants.DEV } = process.env;
+const currentEnv = (): string => REACT_APP_ENV;
+export { currentEnv };
