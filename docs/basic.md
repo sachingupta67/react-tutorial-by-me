@@ -49,3 +49,8 @@ Note : - Create all variables in environment using REACT_APP prefix so you can a
   Type for Props : TCustomModalProps
 
 # Folder Structure
+
+# LINT HUSKY PRETTIER Setup
+
+- link : https://www.youtube.com/watch?v=C7D4nMvbdFQ
+- link : https://www.youtube.com/watch?v=sH93pQb9bWM
