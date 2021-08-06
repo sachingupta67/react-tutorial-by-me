@@ -27,7 +27,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier", "@typescript-eslint", "react-hooks","import"],
+  "plugins": ["react", "prettier", "@typescript-eslint", "react-hooks", "import"],
   "rules": {
     // Go through all the rules and try to remove it from here so that we can build better code
     // "import/order": 0,
@@ -54,7 +54,7 @@
     // "no-underscore-dangle": 0,
     // "jsx-a11y/media-has-caption": 0
 
-    "import/prefer-default-export":"off"
+    "import/prefer-default-export": "off"
   },
   "settings": {
     "react": {
