@@ -1,9 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { currentEnv } from "./common";
 
 function App() {
-  console.log("process::::::", currentEnv);
   return (
     <div className="App">
       <header className="App-header">
