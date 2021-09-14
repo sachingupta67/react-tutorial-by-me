@@ -1,10 +1,12 @@
 import React from 'react';
-import Counter from './counter';
+// import Counter from './counter';
+import SignUp from './sign-up';
 
 const Application: React.FC = () => {
   return (
     <>
-      <Counter />
+      {/* <Counter /> */}
+      <SignUp />
     </>
   );
 };
