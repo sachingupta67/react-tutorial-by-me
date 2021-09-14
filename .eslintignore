@@ -6,3 +6,4 @@ src/Agora/agora-room-client-2.js
 src/Agora/agora-client-2.js
 src/Agora/common-function.js
 config-overrides.js
+tsconfig.json
